@@ -217,3 +217,85 @@ a:hover {
         padding-left: 0;
     }
 }
+
+
+/* ========== 科研项目 (Research Projects) 专属样式 ========== */
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.project-item {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+/* 项目标题与角色标签行 */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.project-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* 标签通用样式 */
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0; /* 防止标签被挤压换行 */
+}
+
+.badge-role {
+    background-color: #e3f2fd;
+    color: #0366d6;
+}
+
+.badge-status {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* 项目元数据行 (来源、时间、金额) */
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem; /* 行间距 1rem, 列间距 1.5rem */
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* 移动端适配：垂直堆叠 */
+@media (max-width: 600px) {
+    .project-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
