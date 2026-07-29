@@ -169,3 +169,51 @@ a:hover {
         gap: 1rem;
     }
 }
+/* ========== 学术成果 (Publications) 专属样式 ========== */
+.publication-list {
+    list-style-type: decimal;
+    padding-left: 2.5rem; /* 为序号留出足够空间 */
+    margin-top: 1rem;
+}
+
+.publication-list li {
+    margin-bottom: 1.2rem;
+    text-align: justify; /* 两端对齐，视觉更整齐 */
+    line-height: 1.6;
+    /* 悬挂缩进：第一行顶格，换行时缩进，这是学术列表的标准排版 */
+    text-indent: -2.5rem; 
+    padding-left: 2.5rem; 
+}
+
+/* 高亮作者本人的名字 */
+.publication-list .my-name {
+    font-weight: bold;
+    color: #0366d6; /* 使用主题蓝色 */
+    background-color: #f0f7ff; /* 浅蓝色背景 */
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+/* DOI 链接样式 */
+.publication-list a.doi-link {
+    color: #0366d6;
+    text-decoration: none;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; /* 等宽字体 */
+    font-size: 0.9em;
+    word-break: break-all; /* 防止长 DOI 撑破移动端布局 */
+}
+
+.publication-list a.doi-link:hover {
+    text-decoration: underline;
+}
+
+/* 移动端适配：取消悬挂缩进，改为普通缩进 */
+@media (max-width: 600px) {
+    .publication-list {
+        padding-left: 1.5rem;
+    }
+    .publication-list li {
+        text-indent: 0;
+        padding-left: 0;
+    }
+}
